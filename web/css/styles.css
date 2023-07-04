@@ -163,7 +163,8 @@ a.white {
 	font: 700 0.75rem/0 "Raleway", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
-	letter-spacing: 1px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 .btn-solid-lg:hover {
@@ -806,9 +807,12 @@ input[type='checkbox'] {
 /*     06. Services     */
 /************************/
 .cards-1 {
-	padding-top: 5rem;
+	padding-top: 6rem;
+	padding-bottom: 2rem;
 	text-align: center;
 }
+
+
 
 .cards-1 h2 {
 	margin-bottom: 1rem;
@@ -825,6 +829,13 @@ input[type='checkbox'] {
 	background: transparent;
 	box-shadow: 5px 5px 4px rgb(225, 225, 225);
 }
+
+.cards-1 .card:hover {
+	transform: scale(1.1);
+	background-color: #f1f1f1;
+}
+
+
 
 .cards-1 .card-image {
 	width: 6rem;
@@ -1335,16 +1346,48 @@ input[type='checkbox'] {
 /*********************/
 /*     14. About     */
 /*********************/
-.basic-4 {
-	padding-top: 7rem;
+.basic-4  {
+	padding-top: 6rem;
 	padding-bottom: 4rem;
 	text-align: center;
-	background-color: rgb(241, 241, 241);
+	background-color: #d0d0d0;
+	position: relative;
+}
+
+.basic-4 .ola-gris{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 260px;
+}
+
+
+
+.basic-4 .contenido-equipos{
+	display: flex;
+}
+
+.cont-img-equipo{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cont-img-equipo img{
+	width: 400px;
+	margin-right: 60px;
+	filter: drop-shadow(5px 5px 4px rgb(155, 155, 155));
+}
+
+.basic-4 .contenido-equipo{
+	padding: 20px;
+	width: 50%;
 }
 
 .basic-4 h2 {
 	margin-bottom: 1rem;
-	text-align: center;
+
 }
 
 .basic-4 .team-member {
@@ -1352,68 +1395,18 @@ input[type='checkbox'] {
 	margin-right: auto;
 	margin-bottom: 3.5rem;
 	margin-left: auto;
-
 }
 
-/* Hover Animation */
-.basic-4 .image-wrapper {
-	overflow: hidden;
-	margin-bottom: 1.5rem;
-	border-radius: 50%;
-}
 
-.basic-4 .image-wrapper img {
-	margin: 0;
-	transition: all 0.3s;
-}
 
-.basic-4 .image-wrapper:hover img {
-	-moz-transform: scale(1.15);
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-} 
-/* end of hover animation */
 
-.basic-4 .team-member .p-large {
-	margin-bottom: 0.25rem;
-	font-size: 1.125rem;
-}
-
-.basic-4 .team-member .job-title {
-	margin-bottom: 0.375rem;
-}
-
-.basic-4 .fa-stack {
-	margin-top: 0.375rem;
-	margin-right: 0.125rem;
-	margin-left: 0.125rem;
-	font-size: 0.875rem;
-}
-
-.basic-4 .fa-stack-2x {
-	color: #00bfd8;
-	transition: all 0.2s ease;
-}
-
-.basic-4 .fa-stack-1x {
-	color: #fff;
-	transition: all 0.2s ease;
-}
-
-.basic-4 .fa-stack:hover .fa-stack-2x {
-	color: #00a7bd;
-}
-
-.basic-4 .fa-stack:hover .fa-stack-1x {
-	color: #fff;
-}
 
 
 /***********************/
 /*     15. Contact     */
 /***********************/
 .form-2 {
-	padding-top: 5rem;
+	padding-top: 6rem;
 	padding-bottom: 6.25rem;
 	background: url('../images/contact-background.jpg') center center no-repeat;
 	background-size: cover; 
@@ -1465,7 +1458,7 @@ input[type='checkbox'] {
 /*     16. Footer     */
 /**********************/
 .footer {
-	padding-top: 4.625rem;
+	padding-top: 2.625rem;
 	padding-bottom: 0.5rem;
 }
 
@@ -1519,12 +1512,27 @@ input[type='checkbox'] {
 	padding-top: 1rem;
 	padding-bottom: 0.375rem;
 	text-align: center;
+	background-color: #d0d0d0;
+	font-size: bold
+}
+
+.copyright p{
+	font-size: bold
 }
 
 .copyright .p-small {
 	padding-top: 1.375rem;
-	border-top: 1px solid #c4d8dc;
+	border-top: 1px solid #696868;
 	opacity: 0.7;
+	font-size: 13px;
+	letter-spacing: 3px;
+	color: black;
+}
+
+.copyright a{
+	color: #272727;
+	font-size: bold
+	;
 }
 
 
@@ -2193,16 +2201,22 @@ a:hover.back-to-top {
 /*---------------------------------------------------*/
 .autoridades{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	gap: 0px 100px;
-	font-weight: bold;
+	align-items: start;
 	letter-spacing: 1px;
 	font-size: 17px;
-	background-color: #3db1c1;
-	color: white;
+	color: #171717;
 	padding: 3px 0;
+	margin-left: 50px;
+	line-height: 1.7rem;
+	margin-top: 100px;
 }
 
+.autoridades span{
+	color: #343535;
+	font-weight: bold;
+}
 /* BOTON WHATTSAPP */
 
 .whattsapp {
@@ -2231,21 +2245,108 @@ a:hover.back-to-top {
 
 .miembros{
 	margin-bottom: 50px;
+	border: 2px solid #00bfd8 ;
+	padding: 30px 10px;
+	border-radius: 30px;
+	background-color: #b8c4c5;
 }
 
 .cada-miembro{
 	display: flex;
-	justify-content: center;
-	gap: 9px;
-	letter-spacing: 2px;
+	gap: 0px 12PX;
+	letter-spacing: 1px ;
+	margin-left: 50px;
+	margin-top: 16px;
+	border-bottom: 2px solid  solid #00bfd8;
 }
 
 .cada-miembro i{
 	color: #3db1c1;
-	margin-top: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .cada-miembro .rol{
 	color: #868686;
 	font-weight: 100;
 }
+
+
+/*proyectos*/
+
+.contenedor-proyectos {
+	background-color: #d0d0d0;
+}
+
+.contenedor-proyectos .acordeones {
+	text-align: center;
+	padding: 6rem 0rem 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor-proyectos .acordeones p{
+	width: 620px;
+	color: rgb(100, 99, 99);
+}
+
+.proyectos .acordeon{
+	font-size: 16px;
+	align-items: center;
+	color: white;
+}
+
+.acordeon summary {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 14px;
+	font-size: 18px;
+	letter-spacing: 1px;
+	background-color: #00bfd8;	
+	border: #00bfd8 2px solid  solid;
+	padding: 15px 100px;
+	border-radius: 50px;
+	font-weight: bold;
+	border: 2px solid #00bfd8;
+}
+
+.acordeon summary:hover {
+	background-color: white;
+	color: #00bfd8;
+	border: 2px solid #00bfd8;
+}
+
+.acordeon p{
+	align-items: center;
+	width: 700px;
+	line-height: 27px;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-left: 115px;
+}
+
+.acordeones .proyect-contenido{
+	display: flex;
+	flex-direction: column;
+	gap: 0px 30px;
+	padding: 0px 100px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	margin-top: 2.2rem;
+}
+
+.boton-2{
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 2px solid ;
+}
+
+.boton-2:hover{
+	background-color: white;
+}
+
